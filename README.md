@@ -1,7 +1,7 @@
-#Daily Exercise
+# Daily Exercise
 
-Repo for ....netlify.com.
+Repository for https://exercise.netlify.com/.
 
-##Technologies used:
+## Technologies used:
 * React
 * Styled components with flexbox

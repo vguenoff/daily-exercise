@@ -1,4 +1,6 @@
 body {
-  padding: 1%;
   font-family: sans-serif;
+}
+* {
+  box-sizing: border-box;
 }

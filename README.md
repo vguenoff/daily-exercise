@@ -3,5 +3,5 @@
 Repo for ....netlify.com.
 
 ##Technologies used:
-* The new React Context API (todo)
+* React
 * Styled components with flexbox

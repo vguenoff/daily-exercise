@@ -1,12 +1,12 @@
 import React from 'react';
-import Exercises from './Exercises';
+import ExerciseList from './ExerciseList';
 
 const App = () => (
   <div className="App">
     <nav>
       <h1>Daily Exercise</h1>
     </nav>
-    <Exercises />
+    <ExerciseList />
   </div>
 );
 

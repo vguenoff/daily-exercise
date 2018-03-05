@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import moment from 'moment';
 
 import data from '../data';
@@ -47,14 +48,37 @@ class App extends Component {
     const isLoaded = !Object.keys(this.state).filter(key => this.state[key] === null).length;
 
     return isLoaded && (
-      <div className="App">
+      <StyledApp>
         <nav>
-          <h1>Daily Exercise</h1>
+          <span>Daily Exercise</span>
         </nav>
         <ExerciseList {...this.state} />
-      </div>
+      </StyledApp>
     );
   }
 }
+
+const StyledApp = styled.div`
+  nav {
+    display: flex;
+    background: #000;
+    margin: 0;
+    min-height: 5vh;
+    padding: 0;
+    display; block;
+  }
+  span {
+    align-self: center;
+    padding: 0 2%;
+    color: yellow;
+    font-weight: bold;
+    width: 50%;
+
+    @media (max-width: 414px) {
+      padding: 0 5%;
+    }
+  }
+
+`;
 
 export default App;

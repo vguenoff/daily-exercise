@@ -17,6 +17,7 @@ const ExerciseList = ({
           name,
           imageId,
           desc,
+          backgroundColor,
         } = list[day][evenWeek];
 
         return (
@@ -24,8 +25,9 @@ const ExerciseList = ({
             key={uuid()}
             day={day}
             name={name}
-            imageId={imageId}
             desc={desc}
+            imageId={imageId}
+            backgroundColor={backgroundColor}
           />
         );
       })}
@@ -49,16 +51,34 @@ ExerciseList.propTypes = {
 const StyledExerciseList = styled.div`
   ul {
     padding: 0;
+    margin: 0;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 823px) {
+      flex-wrap: wrap;
+    }
   }
   /* reordering every child based on the current day */
   li {
+    width: 20%;
     &:nth-child(${props => props.days[0]}) { order: 1;}
     &:nth-child(${props => props.days[1]}) { order: 2;}
     &:nth-child(${props => props.days[2]}) { order: 3;}
     &:nth-child(${props => props.days[3]}) { order: 4;}
     &:nth-child(${props => props.days[4]}) { order: 5;}
+
+    @media (max-width: 823px) {
+      width: 50%;
+      min-height: auto;
+      &:last-child {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 414px) {
+      width: 100%;
+    }
   }
 `;
 

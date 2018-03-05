@@ -1,6 +1,11 @@
+html {
+  font-size: 90%;
+}
+
 body {
   font-family: sans-serif;
 }
+
 * {
   box-sizing: border-box;
 }
